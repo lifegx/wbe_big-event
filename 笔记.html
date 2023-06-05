@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4> 在layui里面怎么设置表单验证 自定义校验规则</h4>
+    <ol>
+        <li>在layui官网中找到所要设置的格式</li>
+        <li>引入layui.js</li>
+        <li>在js中从layui中获取form对象</li>
+        <li>var form = layui.form(可以把layui中的对象获取过来)</li>
+        <li>进行调用 form.verify({pwd: 复制的代码});</li>
+        <li>最后在表单里面使用</li>
+    </ol>
+    <h4>密码框和确认密码验证表单</h4>
+    <ol>
+        <li>在layui对象中创建一个判断密码是否一致的条件</li>
+        <li>添加到要确认密码表单中</li>
+        <li>拿到密码框的内容在一次等于判断</li>
+        <li>日过判断失败,则return一个提示消息即可</li>
+    </ol>
+    <h4>如何应对请求接口</h4>
+    <ol>
+        <li>在请求有权限接口的时候</li>
+        <li>首先将的到的服务器传过来的接口 res.token </li>
+        <li>在存储到本地中: localStorage.setItem('token', res.token); 进行使用</li>
+    </ol>
+    <h4>接口的优化</h4>
+    <ol>
+        <li>使用jQuery中的ajaxPrefilter()对象 : 每次接口请求的时候就会调用一遍</li>
+        <li>为了方便修改在创建一个js进行拼接</li>
+    </ol>
+</body>
+
+</html>
