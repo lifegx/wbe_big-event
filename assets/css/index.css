@@ -50,3 +50,8 @@ a {
     top: 4px;
     margin-right: 10px;
 }
+
+iframe {
+    width: 100%;
+    /* scrolling: none !important; */
+}

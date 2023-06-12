@@ -38,7 +38,13 @@
     </ol>
     <h4>如何使用iframe标签</h4>
     <ol>
-        <li></li>
+        <li>第一个方法： iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。 scrolling : auto -----在需要的时候滚动条出现 scrolling : yes ------始终显示滚动条 scrolling : no -------始终隐藏滚动条 当设置 scrolling : no 时，全部的滚动条就没有了。 第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。</li>
+        <li>window.parent.getUserInfo() : 从子页面调用父页面元素加具体的函数名</li>
+    </ol>
+    <h4>表单玩法</h4>
+    <ol>
+        <li>在表单里面加readonly可以设置只读</li>
+        <li>inout:hidden : 可以实现隐藏域</li>
     </ol>
 </body>
 
