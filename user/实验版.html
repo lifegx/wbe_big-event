@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <style>
+        .layui-layer-title {}
+        
+        .layui-layer-close1 {
+            display: inline;
+            z-index: 999;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +24,33 @@
             卡片式面板面板通常用于非白色背景色的主体内<br> 从而映衬出边框投影
         </div>
     </div>
+    <script type="text/html" id="alert-add">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">输入框</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                </div>
+        </form>
+    </script>
+    <button type="button" class="layui-btn layui-btn-normal" id="btn-dome">点击弹出</button>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script>
+        $(function() {
+            var layer = layui.layer;
+            $('#btn-dome').on('click', function() {
+                layer.open({
+                    area: ['500px', '300px'],
+                    type: 1,
+                    title: 'this is a dome',
+                    content: $('#alert-add').html(),
+                });
+            })
+
+
+        })
+    </script>
 </body>
 
 </html>
